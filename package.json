@@ -1,0 +1,47 @@
+{
+  "name": "thiran-server",
+  "version": "1.0.0",
+  "description": "Backend API for Thiran 2026 - PSG College Technical Symposium",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js",
+    "migrate": "node src/database/migrate.js",
+    "seed": "node src/database/seed.js",
+    "pm2:start": "pm2 start ecosystem.config.js",
+    "pm2:stop": "pm2 stop thiran-server",
+    "pm2:restart": "pm2 restart thiran-server",
+    "pm2:logs": "pm2 logs thiran-server",
+    "pm2:monit": "pm2 monit"
+  },
+  "keywords": [
+    "event-management",
+    "registration-system",
+    "symposium",
+    "psg-tech"
+  ],
+  "author": "PSG College of Technology - Department of Computer Applications",
+  "license": "ISC",
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
+  },
+  "type": "commonjs",
+  "dependencies": {
+    "compression": "^1.8.1",
+    "cors": "^2.8.6",
+    "dotenv": "^17.2.3",
+    "express": "^5.2.1",
+    "express-rate-limit": "^8.2.1",
+    "express-validator": "^7.3.1",
+    "helmet": "^8.1.0",
+    "jsonwebtoken": "^9.0.3",
+    "morgan": "^1.10.1",
+    "nodemailer": "^7.0.13",
+    "pg": "^8.18.0",
+    "winston": "^3.19.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.11"
+  }
+}
